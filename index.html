@@ -102,7 +102,7 @@
     <style>
         /* --- General Styles --- */
         :root {
-            --primary-color: #007BFF; /* آبی پر جنب و جوش */
+            --primary-color: #8f83ee; /* آبی پر جنب و جوش */
             --secondary-color: #0056b3; /* آبی تیره‌تر برای هاور */
             --accent-color: #28a745; /* سبز برای موفقیت/برجستگی‌ها */
             --dark-color: #212529; /* تقریباً مشکی برای متن/فوتر */
@@ -117,6 +117,7 @@
         * {
             margin: 0;
             padding: 0;
+            border-radius: 12px;
             box-sizing: border-box;
         }
 
@@ -161,8 +162,8 @@
             background-color: var(--primary-color); /* رنگ پایه */
             background-image: 
                 radial-gradient(ellipse at top left, rgba(255,255,255,0.1) 0%, transparent 70%),
-                radial-gradient(ellipse at bottom right, rgba(255,255,255,0.1) 0%, transparent 70%),
-                linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px),
+                radial-gradient(ellipse at bottom right, rgba(255,255,255,0.1) 40%, transparent 70%),
+                linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 2px),
                 linear-gradient(180deg, rgba(255,255,255,0.05) 1px, transparent 1px);
             background-size: 
                 800px 800px, 
@@ -273,7 +274,7 @@
         .logo {
             font-size: 1.8rem;
             font-weight: 800;
-            color: var(--primary-color);
+            color: var(--secondary-color);
             text-decoration: none;
             display: flex;
             align-items: center;
@@ -316,7 +317,7 @@
 
         .main-nav a:hover,
         .main-nav a.active {
-            color: var(--primary-color);
+            color: #007BFF;
         }
         .main-nav a:hover::after,
         .main-nav a.active::after {
@@ -332,7 +333,7 @@
             background: none;
             border: none;
             font-size: 2rem;
-            color: var(--primary-color);
+            color: var(--secondary-color);
             cursor: pointer;
             transition: transform 0.3s ease;
         }
@@ -416,7 +417,7 @@
 
         .card i {
             font-size: 3.5rem;
-            color: var(--primary-color);
+            color: #007BFF;
             margin-bottom: 20px;
             transition: color 0.3s ease;
         }
@@ -438,7 +439,7 @@
         #structure .card-header i, #comparison .card-header i, #preparation .card-header i, #scoring .card-header i, #common-issues .card-header i {
             margin: 0 0 0 18px;
             font-size: 2.5rem;
-            color: var(--primary-color);
+            color: #007BFF;
         }
         #structure .card-header h3, #comparison .card-header h3, #preparation .card-header h3, #scoring .card-header h3, #common-issues .card-header h3 {
             margin-bottom: 0;
@@ -481,7 +482,7 @@
             background: var(--white-color); 
             padding: 25px; 
             border-radius: 10px; 
-            border-right: 6px solid var(--primary-color); 
+            border-right: 6px solid #007BFF; 
             box-shadow: var(--shadow-light);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -490,7 +491,7 @@
             box-shadow: var(--shadow-medium);
         }
         .step-number {
-            background-color: var(--primary-color); 
+            background-color: #007BFF; 
             color: var(--white-color); 
             width: 60px; 
             height: 60px; 
@@ -506,7 +507,7 @@
         }
         .step-content h3 { 
             margin-bottom: 8px; 
-            color: var(--primary-color);
+            color: var(--secondary-color);
             font-size: 1.5rem;
         }
         .step-content p {
@@ -543,10 +544,10 @@
             position: absolute; 
             left: 25px; 
             transition: transform 0.3s ease;
-            color: var(--primary-color);
+            color: var(--secondary-color);
         }
         .faq-item[open] summary {
-            background-color: var(--primary-color);
+            background-color: #007BFF;
             color: var(--white-color);
         }
         .faq-item[open] summary::after { 
@@ -576,7 +577,7 @@
             font-size: 0.95rem;
         }
         .main-footer a { 
-            color: var(--primary-color); 
+            color: #007BFF; 
             text-decoration: none; 
             transition: color 0.3s ease;
         }
@@ -686,7 +687,7 @@
                 align-items: center;
                 text-align: center;
                 border-right: none;
-                border-top: 6px solid var(--primary-color);
+                border-top: 6px solid #007BFF
             }
             .step-number {
                 margin: 0 0 20px 0; /* تنظیم مارجین برای قرارگیری روی هم */
@@ -922,7 +923,7 @@
             <div class="container">
                 <h2>پیش‌نیازهای فنی و محیطی برای تافل هوم ادیشن</h2>
                 <p style="text-align: center; max-width: 800px; margin: 0 auto 50px;">اطمینان از فراهم بودن این شرایط قبل از آزمون، برای تجربه موفقیت‌آمیز شما ضروری است.</p>
-                <img src="https://placehold.co/800x350/8684f1/FFFFFF?text=Ideal+Test+Environment" alt="محیط ایده‌آل آزمون تافل در خانه" class="responsive-img" loading="lazy">
+                <img src="https://placehold.co/800x300/8684f1/FFFFFF?text=Ideal+Test+Environment" alt="محیط ایده‌آل آزمون تافل در خانه" class="responsive-img" loading="lazy">
                 <div class="card-grid">
                     <div class="card"><i class="fa-solid fa-computer"></i><h3>کامپیوتر مناسب</h3><p>لپ‌تاپ یا دسکتاپ با سیستم‌عامل Windows 10/11 یا macOS (نسخه‌های جدید و به‌روز). استفاده از تبلت، موبایل یا Chromebook مجاز نیست.</p></div>
                     <div class="card"><i class="fa-solid fa-wifi"></i><h3>اینترنت پرسرعت و پایدار</h3><p>اتصال اینترنت با سرعت حداقل 2 Mbps آپلود و 2 Mbps دانلود. توصیه می‌شود برای جلوگیری از قطعی، از کابل LAN به جای Wi-Fi استفاده کنید.</p></div>
@@ -944,7 +945,7 @@
             <div class="container">
                 <h2>راهنمای جامع آمادگی برای آزمون تافل هوم ادیشن</h2>
                 <p style="text-align: center; max-width: 800px; margin: 0 auto 50px;">آمادگی صحیح کلید موفقیت در آزمون تافل است. با برنامه‌ریزی و استفاده از منابع درست، به بهترین نتیجه دست پیدا کنید.</p>
-                <img src="https://placehold.co/800x450/8684f1/FFFFFF?text=Effective+Study+Plan" alt="برنامه مطالعاتی موثر برای تافل" class="responsive-img" loading="lazy">
+                <img src="https://placehold.co/800x300/8684f1/FFFFFF?text=Effective+Study+Plan" alt="برنامه مطالعاتی موثر برای تافل" class="responsive-img" loading="lazy">
                 <div class="card-grid">
                     <div class="card">
                         <div class="card-header"><i class="fa-solid fa-brain"></i><h3>شناخت کامل آزمون</h3></div>
@@ -991,7 +992,7 @@
                     <div class="step"><div class="step-number">۴</div><div class="step-content"><h3>تاییدیه و آماده‌سازی برای آزمون</h3><p>پس از پرداخت موفقیت‌آمیز، ایمیل تاییدیه از ETS و یک لینک ورود به آزمون از ProctorU (شرکت ناظر آزمون) دریافت خواهید کرد. این ایمیل‌ها را به دقت بررسی و برای روز آزمون ذخیره کنید. حتماً نرم‌افزار ETS Secure Browser را نصب کرده و سیستم خود را با ابزار ProctorU بررسی کنید.</p></div></div>
                 </div>
                 <div class="card" style="margin: 50px auto 0; text-align: right; max-width: 800px;">
-                    <h3 style="color: var(--primary-color);"><i class="fa-solid fa-dollar-sign"></i> هزینه‌های جانبی احتمالی</h3>
+                    <h3 style="color: var(--secondary-color);"><i class="fa-solid fa-dollar-sign"></i> هزینه‌های جانبی احتمالی</h3>
                     <ul class="list">
                         <li><strong>ثبت‌نام دیرهنگام (Late Registration):</strong> ۴۰ دلار (در صورت ثبت‌نام کمتر از ۴ روز قبل از آزمون)</li>
                         <li><strong>تغییر تاریخ یا مکان آزمون (Rescheduling):</strong> ۶۰ دلار</li>
@@ -1060,7 +1061,7 @@
                     <div class="card"><i class="fa-solid fa-mug-hot"></i><h3>آب و میان‌وعده مجاز</h3><p>می‌توانید یک بطری آب شفاف و یک میان‌وعده سبک (مانند یک میوه) در دسترس داشته باشید. اما از لیوان کدر و غذاهای پر سر و صدا خودداری کنید. به خاطر داشته باشید که تنها یک استراحت ۱۰ دقیقه‌ای دارید.</p></div>
                     <div class="card"><i class="fa-solid fa-eye-slash"></i><h3>ارتباط با مراقب و قوانین</h3><p>در طول آزمون تنها به صفحه کامپیوتر نگاه کنید. هرگونه حرکت مشکوک چشم یا سر می‌تواند به عنوان تقلب تلقی شود. در صورت نیاز به ارتباط با مراقب، از طریق چت داخلی اقدام کنید و منتظر پاسخ او بمانید.</p></div>
                 </div>
-                <img src="https://placehold.co/800x450/28a745/FFFFFF?text=Test+Day+Tips" alt="نکات مهم روز آزمون تافل هوم ادیشن" class="responsive-img" loading="lazy">
+                <img src="https://placehold.co/800x300/8f83ee/FFFFFF?text=Test+Day+Tips" alt="نکات مهم روز آزمون تافل هوم ادیشن" class="responsive-img" loading="lazy">
             </div>
         </section>
 

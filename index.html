@@ -85,11 +85,11 @@
       "dateModified": "2024-06-10T09:20:00+08:00",
       "author": [{
           "@type": "Person",
-          "name": "AI Web Developer"
+          "name": "RemoteVm website Dev"
         }],
       "publisher": {
         "@type": "Organization",
-        "name": "Your Website Name",
+        "name": "OnlineExam.info",
         "logo": {
           "@type": "ImageObject",
           "url": "https://placehold.co/100x100/007BFF/FFFFFF?text=Logo"
@@ -104,7 +104,7 @@
         :root {
             --primary-color: #8f83ee; /* آبی پر جنب و جوش */
             --secondary-color: #0056b3; /* آبی تیره‌تر برای هاور */
-            --accent-color: #28a745; /* سبز برای موفقیت/برجستگی‌ها */
+            --accent-color: #7585FF; /* سبز برای موفقیت/برجستگی‌ها */
             --dark-color: #212529; /* تقریباً مشکی برای متن/فوتر */
             --light-color: #f8f9fa; /* خاکستری روشن برای بخش‌های متناوب */
             --white-color: #ffffff;
@@ -258,7 +258,7 @@
         /* --- Header & Navigation --- */
         .main-header {
             background-color: var(--white-color);
-            padding: 15px 0;
+            padding: 14px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -272,20 +272,27 @@
         }
 
         .logo {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 800;
-            color: var(--secondary-color);
+            color: var(--dark-color);
             text-decoration: none;
             display: flex;
+            flex-direction: column;
+            text-align: center;
             align-items: center;
         }
         .logo i {
-            margin-left: 10px;
-            color: var(--accent-color);
+            margin-bottom: 5px; /* فاصله بین آیکون و متن */
+            color: var(--primary-color);
             transition: transform 0.3s ease;
         }
         .logo:hover i {
             transform: rotate(5deg) scale(1.05);
+        }
+        .logo span {
+            font-size: 0.9rem; /* اندازه فونت کوچکتر برای خط دوم */
+            font-weight: 500;
+            line-height: 1.2;
         }
 
         .main-nav ul {
@@ -317,7 +324,7 @@
 
         .main-nav a:hover,
         .main-nav a.active {
-            color: #007BFF;
+            color: var(--primary-color);
         }
         .main-nav a:hover::after,
         .main-nav a.active::after {
@@ -333,7 +340,7 @@
             background: none;
             border: none;
             font-size: 2rem;
-            color: var(--secondary-color);
+            color: var(--dark-color);
             cursor: pointer;
             transition: transform 0.3s ease;
         }
@@ -414,6 +421,11 @@
             transform: translateY(-12px);
             box-shadow: var(--shadow-medium);
         }
+        /* START: Style for score report images */
+        .card .responsive-img {
+            margin: 0; /* Remove extra margin for images inside cards */
+        }
+        /* END: Style for score report images */
 
         .card i {
             font-size: 3.5rem;
@@ -749,11 +761,13 @@
     <header class="main-header">
         <div class="container">
             <a href="#home" class="logo" aria-label="صفحه اصلی تافل هوم ادیشن">
-                <i class="fa-solid fa-house-laptop"></i> تافل هوم ادیشن
+                <i class="fa-solid fa-house-laptop"></i>
+                <span>تافل <br> هوم ادیشن</span>
             </a>
             <nav class="main-nav" id="main-nav" aria-label="منوی اصلی ناوبری">
                 <ul>
                     <li><a href="#about" aria-label="آزمون چیست؟">آزمون چیست؟</a></li>
+                    <li><a href="#benefits" aria-label="مزایای آزمون آنلاین">مزایا</a></li>
                     <li><a href="#comparison" aria-label="مقایسه با نسخه حضوری">مقایسه</a></li>
                     <li><a href="#structure" aria-label="ساختار آزمون">ساختار</a></li>
                     <li><a href="#requirements" aria-label="پیش‌نیازهای فنی و محیطی">پیش‌نیازها</a></li>
@@ -761,6 +775,7 @@
                     <li><a href="#register" aria-label="ثبت‌نام آزمون">ثبت‌نام</a></li>
                     <li><a href="#scoring" aria-label="نمره‌دهی و کارنامه">نمره‌دهی</a></li>
                     <li><a href="#tips" aria-label="نکات روز آزمون">نکات آزمون</a></li>
+                    <li><a href="#score-reports" aria-label="کارنامه‌های تافل">کارنامه‌ها</a></li>
                     <li><a href="#faq" aria-label="سوالات متداول">سوالات متداول</a></li>
                 </ul>
             </nav>
@@ -784,12 +799,18 @@
         <section id="about">
             <div class="container">
                 <h2>تافل هوم ادیشن چیست و چرا انتخاب مناسبی است؟</h2>
-                <div style="text-align: justify; max-width: 850px; margin: 0 auto 50px;">
+                <div style="text-align: justify; max-width: 850px; margin: 0 auto;">
                     <p>آزمون تافل (<strong>Test Of English as a Foreign Language</strong>) یکی از معتبرترین و پرکاربردترین آزمون‌های سنجش مهارت زبان انگلیسی در سطح آکادمیک و بین‌المللی است که توسط سازمان ETS برگزار می‌شود. مدرک تافل توسط بیش از ۱۱,۵۰۰ دانشگاه و موسسه در بیش از ۱۶۰ کشور جهان، از جمله آمریکا، کانادا، استرالیا، انگلستان و کشورهای اروپایی، به رسمیت شناخته می‌شود و برای پذیرش تحصیلی، مهاجرت کاری و حتی ویزا ضروری است.</p>
                     <p>با شیوع بیماری‌های واگیردار و نیاز به انعطاف‌پذیری بیشتر، <strong>تافل هوم ادیشن (TOEFL iBT Home Edition)</strong> به عنوان راه‌حلی ایده‌آل معرفی شد. این نسخه دقیقاً همان آزمون تافل iBT حضوری است، اما به شما امکان می‌دهد تا آن را در امنیت و راحتی خانه خود و با استفاده از کامپیوتر شخصی‌تان انجام دهید. از نظر محتوا، ساختار، نحوه نمره‌دهی و اعتبار، هیچ تفاوتی با نسخه حضوری ندارد و مدرک آن کاملاً یکسان و مورد پذیرش جهانی است.</p>
                     <p>انتخاب تافل هوم ادیشن، مزایای بی‌نظیری دارد: <strong>دسترسی آسان</strong> برای افرادی که در مناطق دور از مراکز آزمون زندگی می‌کنند، <strong>انعطاف‌پذیری بی‌سابقه</strong> در زمان‌بندی (۲۴ ساعته و ۴ روز در هفته)، و <strong>آسایش محیط خانه</strong> که می‌تواند استرس روز آزمون را به حداقل برساند. این گزینه‌ای عالی برای تضمین مسیر تحصیلی و شغلی شما در خارج از کشور است.</p>
-                    <img src="https://placehold.co/800x250/8684f1/FFFFFF?text=Online+Learning+Benefits" alt="مزایای یادگیری و آزمون آنلاین در خانه" class="responsive-img" loading="lazy">
                 </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section id="benefits">
+            <div class="container">
+                <h2>مزایای انجام آزمون آنلاین در خانه</h2>
                 <div class="card-grid">
                     <div class="card">
                         <i class="fa-solid fa-house-user"></i>
@@ -855,6 +876,9 @@
                 <p style="text-align: center; margin-top: 40px; font-style: italic;">مهم است بدانید که اعتبار و نوع سوالات در هر دو نسخه کاملاً یکسان است و تنها تفاوت در تجربه روز آزمون خلاصه می‌شود.</p>
             </div>
         </section>
+
+        <!-- The rest of the sections remain unchanged -->
+        <!-- ... (structure, requirements, preparation, etc.) ... -->
 
         <!-- Test Structure Section -->
         <section id="structure">
@@ -1090,6 +1114,35 @@
                 </div>
             </div>
         </section>
+        
+        <!-- START: New Score Reports Section -->
+        <section id="score-reports">
+            <div class="container">
+                <h2>کارنامه های تافل iBT اخذ شده توسط ما</h2>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 50px;">نمونه‌هایی از کارنامه‌های موفقیت‌آمیز داوطلبانی که از خدمات ما استفاده کرده‌اند. این نمرات نشان‌دهنده تعهد و کیفیت کار ماست.</p>
+                <div class="card-grid">
+                    <!-- Score Report 1 -->
+                    <div class="card">
+                        <img src="https://placehold.co/300x420/f0f0f0/333333?text=نمونه+کارنامه+۱" alt="نمونه کارنامه تافل ۱" class="responsive-img" loading="lazy">
+                        <h3 style="margin-top: 20px;">نمره کل: 110</h3>
+                        <p><strong>دانشگاه مقصد:</strong> دانشگاه تورنتو، کانادا</p>
+                    </div>
+                    <!-- Score Report 2 -->
+                    <div class="card">
+                        <img src="https://placehold.co/300x420/e9ecef/333333?text=نمونه+کارنامه+۲" alt="نمونه کارنامه تافل ۲" class="responsive-img" loading="lazy">
+                        <h3 style="margin-top: 20px;">نمره کل: 105</h3>
+                        <p><strong>دانشگاه مقصد:</strong> دانشگاه کالیفرنیا، آمریکا</p>
+                    </div>
+                    <!-- Score Report 3 -->
+                    <div class="card">
+                        <img src="https://placehold.co/300x420/f8f9fa/333333?text=نمونه+کارنامه+۳" alt="نمونه کارنامه تافل ۳" class="responsive-img" loading="lazy">
+                        <h3 style="margin-top: 20px;">نمره کل: 112</h3>
+                        <p><strong>دانشگاه مقصد:</strong> امپریال کالج لندن، انگلستان</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END: New Score Reports Section -->
 
         <!-- FAQ Section -->
         <section id="faq">
@@ -1137,7 +1190,7 @@
             </div>
             <p>این صفحه یک راهنمای جامع و غیررسمی برای آزمون تافل هوم ادیشن است.</p>
             <p>برای اطلاعات دقیق و به‌روز درباره قوانین، هزینه‌ها و ثبت‌نام، همیشه به <a href="https://www.ets.org/toefl" target="_blank" rel="noopener noreferrer">وب‌سایت رسمی ETS</a> مراجعه کنید.</p>
-            <p>&copy; 2024 کلیه حقوق محفوظ است. طراحی و توسعه با ❤️ برای همه زبان‌آموزان.</p>
+            <p>© 2024 کلیه حقوق محفوظ است. طراحی و توسعه با ❤️ برای همه زبان‌آموزان.</p>
         </div>
     </footer>
     

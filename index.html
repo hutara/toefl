@@ -7,7 +7,8 @@
     <meta name="description" content="راهنمای کامل و جامع آزمون تافل هوم ادیشن (TOEFL iBT Home Edition) در ایران. از معرفی و پیش‌نیازها تا ثبت‌نام، نکات آزمون، و پاسخ به سوالات متداول. کلید موفقیت شما در تافل خانگی." />
     <meta name="keywords" content="تافل هوم ادیشن, TOEFL Home Edition, آزمون تافل در خانه, تافل خانگی, ثبت نام تافل هوم ادیشن, هزینه تافل هوم ادیشن, شرایط تافل هوم ادیشن, نمرات تافل, آمادگی تافل" />
     <link rel="canonical" href="https://yourwebsite.com/toefl-home-edition-guide" /> <!-- آدرس واقعی صفحه خود را اینجا قرار دهید -->
-
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <!-- Google Fonts: Vazirmatn -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -79,17 +80,17 @@
       "@type": "Article",
       "headline": "راهنمای جامع آزمون تافل هوم ادیشن (TOEFL Home Edition)",
       "image": [
-        "map-periwinkle.png"
+        "TOEFL_Illustration_01_OurFamilyofProducts.png"
        ],
       "datePublished": "2024-06-10T08:00:00+08:00",
       "dateModified": "2024-06-10T09:20:00+08:00",
       "author": [{
           "@type": "Person",
-          "name": "AI Web Developer"
+          "name": "RemoteVm website Dev"
         }],
       "publisher": {
         "@type": "Organization",
-        "name": "Your Website Name",
+        "name": "OnlineExam.info",
         "logo": {
           "@type": "ImageObject",
           "url": "https://placehold.co/100x100/007BFF/FFFFFF?text=Logo"
@@ -102,9 +103,9 @@
     <style>
         /* --- General Styles --- */
         :root {
-            --primary-color: #8f83ee; /* آبی پر جنب و جوش */
-            --secondary-color: #0056b3; /* آبی تیره‌تر برای هاور */
-            --accent-color: #28a745; /* سبز برای موفقیت/برجستگی‌ها */
+            --primary-color: #9196ffhat; /* آبی پر جنب و جوش */
+            --secondary-color: #343579; /* آبی تیره‌تر برای هاور */
+            --accent-color: #7585FF; /* سبز برای موفقیت/برجستگی‌ها */
             --dark-color: #212529; /* تقریباً مشکی برای متن/فوتر */
             --light-color: #f8f9fa; /* خاکستری روشن برای بخش‌های متناوب */
             --white-color: #ffffff;
@@ -258,7 +259,7 @@
         /* --- Header & Navigation --- */
         .main-header {
             background-color: var(--white-color);
-            padding: 15px 0;
+            padding: 14px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -271,22 +272,39 @@
             align-items: center;
         }
 
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--secondary-color);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-        }
-        .logo i {
-            margin-left: 10px;
-            color: var(--accent-color);
-            transition: transform 0.3s ease;
-        }
-        .logo:hover i {
-            transform: rotate(5deg) scale(1.05);
-        }
+/* --- بهینه‌سازی استایل لوگو --- */
+.logo {
+    color: var(--dark-color);
+    text-decoration: none;
+    
+    /* ۱. فعال‌سازی Flexbox برای چیدمان عمودی */
+    display: flex;
+    flex-direction: column;
+
+    /* ۲. وسط‌چین کردن افقی آیکون و متن */
+    align-items: center;   
+    
+    /* ۳. ایجاد فاصله استاندارد بین آیکون و متن */
+    gap: 5px; 
+}
+
+.logo i {
+    font-size: 1.8rem; /* کمی بزرگ‌تر کردن آیکون برای تاکید بیشتر */
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+    margin-bottom: 0; /* حذف مارجین قدیمی چون از gap استفاده کردیم */
+}
+
+.logo:hover i {
+    transform: rotate(5deg) scale(1.05);
+}
+
+.logo span {
+    font-weight: 700;        /* وزن فونت مناسب برای عنوان */
+    font-size: 1rem;         /* کاهش اندازه فونت متن برای تناسب */
+    line-height: 1.3;        /* کاهش فاصله خطوط برای نزدیک‌تر شدن کلمات */
+    text-align: center;      /* **مهم‌ترین تغییر:** وسط‌چین کردن متن دو خطی */
+}
 
         .main-nav ul {
             list-style: none;
@@ -317,7 +335,7 @@
 
         .main-nav a:hover,
         .main-nav a.active {
-            color: #007BFF;
+            color: var(--primary-color);
         }
         .main-nav a:hover::after,
         .main-nav a.active::after {
@@ -333,7 +351,7 @@
             background: none;
             border: none;
             font-size: 2rem;
-            color: var(--secondary-color);
+            color: var(--dark-color);
             cursor: pointer;
             transition: transform 0.3s ease;
         }
@@ -343,7 +361,7 @@
 
         /* --- Hero Section --- */
         .hero {
-            background: linear-gradient(rgba(0, 123, 255, 0.9), rgba(0, 86, 179, 0.9)), url('map-periwinkle.png') no-repeat center center/cover;
+            background: linear-gradient(rgba(52, 53, 121, 1.9), rgba(145, 150, 255, 1.32)), url('TOEFL_Illustration_01_OurFamilyofProducts.png') no-repeat center center/cover;
             height: 90vh;
             color: var(--white-color);
             display: flex;
@@ -414,10 +432,15 @@
             transform: translateY(-12px);
             box-shadow: var(--shadow-medium);
         }
+        /* START: Style for score report images */
+        .card .responsive-img {
+            margin: 0; /* Remove extra margin for images inside cards */
+        }
+        /* END: Style for score report images */
 
         .card i {
             font-size: 3.5rem;
-            color: #007BFF;
+            color: var(--primary-color);
             margin-bottom: 20px;
             transition: color 0.3s ease;
         }
@@ -435,11 +458,12 @@
             display: flex;
             align-items: center;
             margin-bottom: 15px;
+            
         }
         #structure .card-header i, #comparison .card-header i, #preparation .card-header i, #scoring .card-header i, #common-issues .card-header i {
             margin: 0 0 0 18px;
             font-size: 2.5rem;
-            color: #007BFF;
+            color: var(--primary-color);
         }
         #structure .card-header h3, #comparison .card-header h3, #preparation .card-header h3, #scoring .card-header h3, #common-issues .card-header h3 {
             margin-bottom: 0;
@@ -482,7 +506,7 @@
             background: var(--white-color); 
             padding: 25px; 
             border-radius: 10px; 
-            border-right: 6px solid #007BFF; 
+            border-right: 6px solid #9196ff; 
             box-shadow: var(--shadow-light);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -491,7 +515,7 @@
             box-shadow: var(--shadow-medium);
         }
         .step-number {
-            background-color: #007BFF; 
+            background-color: #343579; 
             color: var(--white-color); 
             width: 60px; 
             height: 60px; 
@@ -749,11 +773,13 @@
     <header class="main-header">
         <div class="container">
             <a href="#home" class="logo" aria-label="صفحه اصلی تافل هوم ادیشن">
-                <i class="fa-solid fa-house-laptop"></i> تافل هوم ادیشن
+                <i class="fa-solid fa-house-laptop"></i>
+                <span>تافل <br> هوم ادیشن</span>
             </a>
             <nav class="main-nav" id="main-nav" aria-label="منوی اصلی ناوبری">
                 <ul>
                     <li><a href="#about" aria-label="آزمون چیست؟">آزمون چیست؟</a></li>
+                    <li><a href="#benefits" aria-label="مزایای آزمون آنلاین">مزایا</a></li>
                     <li><a href="#comparison" aria-label="مقایسه با نسخه حضوری">مقایسه</a></li>
                     <li><a href="#structure" aria-label="ساختار آزمون">ساختار</a></li>
                     <li><a href="#requirements" aria-label="پیش‌نیازهای فنی و محیطی">پیش‌نیازها</a></li>
@@ -761,6 +787,7 @@
                     <li><a href="#register" aria-label="ثبت‌نام آزمون">ثبت‌نام</a></li>
                     <li><a href="#scoring" aria-label="نمره‌دهی و کارنامه">نمره‌دهی</a></li>
                     <li><a href="#tips" aria-label="نکات روز آزمون">نکات آزمون</a></li>
+                    <li><a href="#score-reports" aria-label="کارنامه‌های تافل">کارنامه‌ها</a></li>
                     <li><a href="#faq" aria-label="سوالات متداول">سوالات متداول</a></li>
                 </ul>
             </nav>
@@ -784,12 +811,18 @@
         <section id="about">
             <div class="container">
                 <h2>تافل هوم ادیشن چیست و چرا انتخاب مناسبی است؟</h2>
-                <div style="text-align: justify; max-width: 850px; margin: 0 auto 50px;">
+                <div style="text-align: justify; max-width: 850px; margin: 0 auto;">
                     <p>آزمون تافل (<strong>Test Of English as a Foreign Language</strong>) یکی از معتبرترین و پرکاربردترین آزمون‌های سنجش مهارت زبان انگلیسی در سطح آکادمیک و بین‌المللی است که توسط سازمان ETS برگزار می‌شود. مدرک تافل توسط بیش از ۱۱,۵۰۰ دانشگاه و موسسه در بیش از ۱۶۰ کشور جهان، از جمله آمریکا، کانادا، استرالیا، انگلستان و کشورهای اروپایی، به رسمیت شناخته می‌شود و برای پذیرش تحصیلی، مهاجرت کاری و حتی ویزا ضروری است.</p>
                     <p>با شیوع بیماری‌های واگیردار و نیاز به انعطاف‌پذیری بیشتر، <strong>تافل هوم ادیشن (TOEFL iBT Home Edition)</strong> به عنوان راه‌حلی ایده‌آل معرفی شد. این نسخه دقیقاً همان آزمون تافل iBT حضوری است، اما به شما امکان می‌دهد تا آن را در امنیت و راحتی خانه خود و با استفاده از کامپیوتر شخصی‌تان انجام دهید. از نظر محتوا، ساختار، نحوه نمره‌دهی و اعتبار، هیچ تفاوتی با نسخه حضوری ندارد و مدرک آن کاملاً یکسان و مورد پذیرش جهانی است.</p>
                     <p>انتخاب تافل هوم ادیشن، مزایای بی‌نظیری دارد: <strong>دسترسی آسان</strong> برای افرادی که در مناطق دور از مراکز آزمون زندگی می‌کنند، <strong>انعطاف‌پذیری بی‌سابقه</strong> در زمان‌بندی (۲۴ ساعته و ۴ روز در هفته)، و <strong>آسایش محیط خانه</strong> که می‌تواند استرس روز آزمون را به حداقل برساند. این گزینه‌ای عالی برای تضمین مسیر تحصیلی و شغلی شما در خارج از کشور است.</p>
-                    <img src="https://placehold.co/800x250/8684f1/FFFFFF?text=Online+Learning+Benefits" alt="مزایای یادگیری و آزمون آنلاین در خانه" class="responsive-img" loading="lazy">
                 </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section id="benefits">
+            <div class="container">
+                <h2>مزایای انجام آزمون آنلاین در خانه</h2>
                 <div class="card-grid">
                     <div class="card">
                         <i class="fa-solid fa-house-user"></i>
@@ -855,6 +888,9 @@
                 <p style="text-align: center; margin-top: 40px; font-style: italic;">مهم است بدانید که اعتبار و نوع سوالات در هر دو نسخه کاملاً یکسان است و تنها تفاوت در تجربه روز آزمون خلاصه می‌شود.</p>
             </div>
         </section>
+
+        <!-- The rest of the sections remain unchanged -->
+        <!-- ... (structure, requirements, preparation, etc.) ... -->
 
         <!-- Test Structure Section -->
         <section id="structure">
@@ -923,7 +959,7 @@
             <div class="container">
                 <h2>پیش‌نیازهای فنی و محیطی برای تافل هوم ادیشن</h2>
                 <p style="text-align: center; max-width: 800px; margin: 0 auto 50px;">اطمینان از فراهم بودن این شرایط قبل از آزمون، برای تجربه موفقیت‌آمیز شما ضروری است.</p>
-                <img src="https://placehold.co/800x300/8684f1/FFFFFF?text=Ideal+Test+Environment" alt="محیط ایده‌آل آزمون تافل در خانه" class="responsive-img" loading="lazy">
+                <img src="https://placehold.co/800x300/343579/FFFFFF?text=Ideal+Test+Environment" alt="محیط ایده‌آل آزمون تافل در خانه" class="responsive-img" loading="lazy">
                 <div class="card-grid">
                     <div class="card"><i class="fa-solid fa-computer"></i><h3>کامپیوتر مناسب</h3><p>لپ‌تاپ یا دسکتاپ با سیستم‌عامل Windows 10/11 یا macOS (نسخه‌های جدید و به‌روز). استفاده از تبلت، موبایل یا Chromebook مجاز نیست.</p></div>
                     <div class="card"><i class="fa-solid fa-wifi"></i><h3>اینترنت پرسرعت و پایدار</h3><p>اتصال اینترنت با سرعت حداقل 2 Mbps آپلود و 2 Mbps دانلود. توصیه می‌شود برای جلوگیری از قطعی، از کابل LAN به جای Wi-Fi استفاده کنید.</p></div>
@@ -945,7 +981,7 @@
             <div class="container">
                 <h2>راهنمای جامع آمادگی برای آزمون تافل هوم ادیشن</h2>
                 <p style="text-align: center; max-width: 800px; margin: 0 auto 50px;">آمادگی صحیح کلید موفقیت در آزمون تافل است. با برنامه‌ریزی و استفاده از منابع درست، به بهترین نتیجه دست پیدا کنید.</p>
-                <img src="https://placehold.co/800x300/8684f1/FFFFFF?text=Effective+Study+Plan" alt="برنامه مطالعاتی موثر برای تافل" class="responsive-img" loading="lazy">
+                <img src="https://placehold.co/800x300/343579/FFFFFF?text=Effective+Study+Plan" alt="برنامه مطالعاتی موثر برای تافل" class="responsive-img" loading="lazy">
                 <div class="card-grid">
                     <div class="card">
                         <div class="card-header"><i class="fa-solid fa-brain"></i><h3>شناخت کامل آزمون</h3></div>
@@ -1090,6 +1126,35 @@
                 </div>
             </div>
         </section>
+        
+        <!-- START: New Score Reports Section -->
+        <section id="score-reports">
+            <div class="container">
+                <h2>کارنامه های تافل iBT اخذ شده توسط ما</h2>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 50px;">نمونه‌هایی از کارنامه‌های موفقیت‌آمیز داوطلبانی که از خدمات ما استفاده کرده‌اند. این نمرات نشان‌دهنده تعهد و کیفیت کار ماست.</p>
+                <div class="card-grid">
+                    <!-- Score Report 1 -->
+                    <div class="card">
+                        <img src="Toefl1.jpg" alt="نمونه کارنامه تافل ۱" class="responsive-img" loading="lazy">
+                        <h3 style="margin-top: 20px;">نمره کل: 100</h3>
+                        <p><strong>دانشگاه مقصد:</strong> دانشگاه تورنتو، کانادا</p>
+                    </div>
+                    <!-- Score Report 2 -->
+                    <div class="card">
+                        <img src="Toefl2.jpg" alt="نمونه کارنامه تافل ۲" class="responsive-img" loading="lazy">
+                        <h3 style="margin-top: 20px;">نمره کل: 103</h3>
+                        <p><strong>دانشگاه مقصد:</strong> دانشگاه کالیفرنیا، آمریکا</p>
+                    </div>
+                    <!-- Score Report 3 -->
+                    <div class="card">
+                        <img src="Toefl3.jpg" alt="نمونه کارنامه تافل ۳" class="responsive-img" loading="lazy">
+                        <h3 style="margin-top: 20px;">نمره کل: 111</h3>
+                        <p><strong>دانشگاه مقصد:</strong> امپریال کالج لندن، انگلستان</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END: New Score Reports Section -->
 
         <!-- FAQ Section -->
         <section id="faq">
@@ -1103,7 +1168,7 @@
                     </details>
                     <details class="faq-item">
                         <summary>مدت زمان آزمون تافل هوم ادیشن چقدر است؟</summary>
-                        <div class="faq-content"><p>مدت زمان کلی آزمون تافل هوم ادیشن حدود ۲ ساعت است. این زمان شامل بخش‌های Reading، Listening، Speaking و Writing به همراه یک استراحت ۱۰ دقیقه‌ای بین بخش‌های Listening و Speaking می‌شود.</p></div>
+                        <div class="faq-content"><p>مدت زمان کلی آزمون تافل هوم ادیشن حدود 3 ساعت است. این زمان شامل بخش‌های Reading، Listening، Speaking و Writing به همراه یک استراحت ۱۰ دقیقه‌ای بین بخش‌های Listening و Speaking می‌شود.</p></div>
                     </details>
                     <details class="faq-item">
                         <summary>آیا می‌توانم در طول آزمون استراحت کنم؟</summary>
@@ -1137,7 +1202,7 @@
             </div>
             <p>این صفحه یک راهنمای جامع و غیررسمی برای آزمون تافل هوم ادیشن است.</p>
             <p>برای اطلاعات دقیق و به‌روز درباره قوانین، هزینه‌ها و ثبت‌نام، همیشه به <a href="https://www.ets.org/toefl" target="_blank" rel="noopener noreferrer">وب‌سایت رسمی ETS</a> مراجعه کنید.</p>
-            <p>&copy; 2024 کلیه حقوق محفوظ است. طراحی و توسعه با ❤️ برای همه زبان‌آموزان.</p>
+            <p>© 2024 کلیه حقوق محفوظ است. طراحی و توسعه با ❤️ برای همه زبان‌آموزان.</p>
         </div>
     </footer>
     

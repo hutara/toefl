@@ -105,7 +105,10 @@
         :root {
             --primary-color: #9196ff; /* بنفش روشن*/
             --secondary-color: #343579; /* آببنفش برای هاور */
-            --accent-color: #7585FF; /* سبز برای موفقیت/برجستگی‌ها */
+            --accent2-color: #7585FF; /* سبز برای موفقیت/برجستگی‌ها */
+            
+            --accent-color: #00eaff; /* رنگ آبی روشن برای نئون */
+
             --dark-color: #212529; /* تقریباً مشکی برای متن/فوتر */
             --light-color: #f8f9fa; /* خاکستری روشن برای بخش‌های متناوب */
             --white-color: #ffffff;
@@ -152,42 +155,42 @@
             color: var(--white-color); /* رنگ متن برای بخش Hero */
         }
 
-        /* --- Section Titles (h2) with Animated Background --- */
+        /* --- Section Titles (h2) with Animated Gradient Glow --- */
         h2 {
             text-align: center;
             font-size: clamp(1.8rem, 4vw, 2.8rem);
             position: relative;
             margin-bottom: 50px; /* فضای بیشتر بعد از عنوان */
-            
-            /* سبک‌های جدید برای پس‌زمینه متحرک شبکه/تکنولوژیک */
-            background-color: var(--secondary-color); /* رنگ پایه */
-            background-image: 
-                radial-gradient(ellipse at top left, rgba(255,255,255,0.1) 0%, transparent 70%),
-                radial-gradient(ellipse at bottom right, rgba(255,255,255,0.1) 40%, transparent 70%),
-                linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 2px),
-                linear-gradient(180deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-            background-size: 
-                800px 800px, 
-                800px 800px,
-                60px 60px,
-                60px 60px;
-            background-position: 0 0, 0 0, 0 0, 0 0;
             color: var(--white-color); /* رنگ متن عنوان روی پس‌زمینه */
             padding: 25px 0; /* پدینگ برای ایجاد افکت کادر عنوان */
             border-radius: 12px; /* گوشه‌های گرد برای کادر عنوان */
             box-shadow: 0 10px 30px rgba(0, 123, 255, 0.2); /* سایه پیشرفته */
             overflow: hidden; /* مهم برای برش انیمیشن پس‌زمینه */
-            
-            /* انیمیشن برای حرکت پس‌زمینه شبکه */
-            animation: networkGrid 20s linear infinite; /* انیمیشن طولانی‌تر و روان‌تر */
+            z-index: 1; /* برای اطمینان از اینکه متن روی انیمیشن است */
+        
+            /* سبک‌های جدید برای پس‌زمینه متحرک گرادیان */
+            background: linear-gradient(135deg,
+                        var(--primary-color) 0%,
+                        var(--secondary-color) 25%,
+                        var(--accent-color) 50%, /* استفاده از accent-color برای درخشش */
+                        var(--secondary-color) 75%,
+                        var(--primary-color) 100%);
+            background-size: 400% 400%; /* اندازه بزرگتر برای حرکت گرادیان */
+            animation: gradientShift 20s ease infinite alternate; /* انیمیشن نرم و تکراری */
         }
-
-        /* Keyframes برای انیمیشن شبکه/نقطه */
-        @keyframes networkGrid {
-            0% { background-position: 0% 0%, 0% 0%, 0 0, 0 0; }
-            100% { background-position: 100% 100%, 100% 100%, 60px 60px, 60px 60px; }
+        
+        /* Keyframes برای انیمیشن گرادیان */
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
         }
-
         /* حذف خط زیرین قدیمی h2 */
         h2::after {
             content: none;
@@ -361,7 +364,7 @@
 
         /* --- Hero Section --- */
         .hero {
-            background: linear-gradient(rgba(0, 123, 255, 0.9), rgba(0, 86, 179, 0.9)), url('TOEFL_Illustration_01_OurFamilyofProducts.png') no-repeat center center/cover;
+            background: linear-gradient(rgba(52, 53, 121, 0.9), rgba(145, 150, 255, 0.9)), url('TOEFL_Illustration_01_OurFamilyofProducts.png') no-repeat center center/cover;
             height: 90vh;
             color: var(--white-color);
             display: flex;
